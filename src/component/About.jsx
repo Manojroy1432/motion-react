@@ -1,6 +1,7 @@
 // About.jsx
 import React from "react";
 import { motion } from "motion/react";
+import photo from "../assets/ManojPhoto.jpeg";
 
 const About = () => {
   return (
@@ -24,7 +25,7 @@ const About = () => {
               initial={{ opacity: 0, scale: 0 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ type: "spring", duration: 1, delay: 0.3 }}
-              src="https://via.placeholder.com/600x400"
+              src={photo}
               alt="About Us"
               className="rounded-lg shadow-md"
             />
