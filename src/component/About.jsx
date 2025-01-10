@@ -2,6 +2,10 @@
 import React from "react";
 import { motion } from "motion/react";
 import photo from "../assets/ManojPhoto.jpeg";
+<<<<<<< HEAD
+=======
+
+>>>>>>> efde19d7dd384564137cb78d530e40176178686e
 const About = () => {
   return (
     <section className=" py-12" id="About">
