@@ -30,12 +30,12 @@ const Navbar = () => {
           </a>
           {/* Desktop Links */}
           <div className="hidden md:flex space-x-6">
-            <a
-              href="#Header"
+            <Link
+              to={"/"}
               className="hover:bg-gray-700 p-2 rounded hover:text-white"
             >
               Home
-            </a>
+            </Link>
             <a
               href="#About"
               className="hover:bg-gray-700 p-2 rounded hover:text-white"
@@ -69,10 +69,10 @@ const Navbar = () => {
                 <Link to={"#"} className="block px-4 py-2">
                   Members
                 </Link>
-                <Link to={"#"} className="block px-4 py-2">
+                <Link to={"location"} className="block px-4 py-2">
                   Location
                 </Link>
-                <Link to={"#"} className="block px-4 py-2">
+                <Link to={"location"} className="block px-4 py-2">
                   Contact
                 </Link>
                 <Link to={"#"} className="block px-4 py-2">

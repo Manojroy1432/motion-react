@@ -8,10 +8,9 @@ import Footer from "../component/Footer";
 import Services from "../component/Services";
 
 function Home() {
-  const { theme, setheme } = useContext(themeContext);
+  const { theme, settheme } = useContext(themeContext);
   return (
     <div className={`${theme ? "dark" : "light"}`}>
-      <Navbar />
       <Header />
       <About />
       <Services />
