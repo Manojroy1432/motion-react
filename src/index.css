@@ -5,6 +5,9 @@
 .dark {
   @apply bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 text-gray-100;
 }
+* {
+  font-family: "Montserrat", serif;
+}
 .light {
   @apply bg-gradient-to-r from-white via-slate-50 to-white text-gray-900;
 }

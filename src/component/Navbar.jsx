@@ -32,6 +32,22 @@ const Navbar = () => {
             <a href="#About">About</a>
             <a href="#Services">Services</a>
             <a href="#Contact">Contact</a>
+            <span className="relative">
+              <button className="text-white hover:bg-gray-700 p-2 rounded">
+                Services
+              </button>
+              <div className="absolute left-0 hidden mt-2 w-40 bg-gray-800 text-white rounded shadow-lg group-hover:block">
+                <a href="#" className="block px-4 py-2">
+                  Web Development
+                </a>
+                <a href="#" className="block px-4 py-2">
+                  App Development
+                </a>
+                <a href="#" className="block px-4 py-2">
+                  SEO Services
+                </a>
+              </div>
+            </span>
           </div>
           {/* Dark Mode Toggle */}
           <button onClick={toggleDarkMode} className="p-2 rounded-full ">
