@@ -1,5 +1,7 @@
 import React, { useState, useContext } from "react";
 import { themeContext } from "../App";
+import { FaAngleDown } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -28,24 +30,54 @@ const Navbar = () => {
           </a>
           {/* Desktop Links */}
           <div className="hidden md:flex space-x-6">
-            <a href="#Header">Home</a>
-            <a href="#About">About</a>
-            <a href="#Services">Services</a>
-            <a href="#Contact">Contact</a>
-            <span className="relative">
-              <button className="text-white hover:bg-gray-700 p-2 rounded">
-                Services
+            <a
+              href="#Header"
+              className="hover:bg-gray-700 p-2 rounded hover:text-white"
+            >
+              Home
+            </a>
+            <a
+              href="#About"
+              className="hover:bg-gray-700 p-2 rounded hover:text-white"
+            >
+              About
+            </a>
+            <a
+              href="#Services"
+              className="hover:bg-gray-700 p-2 rounded hover:text-white"
+            >
+              Services
+            </a>
+            <a
+              href="#Contact"
+              className="hover:bg-gray-700 p-2 rounded hover:text-white"
+            >
+              Contact
+            </a>
+            <span className="relative group">
+              <button className="flex items-center justify-center gap-1 hover:text-white hover:bg-gray-700 p-2 rounded ">
+                More{" "}
+                <span>
+                  <FaAngleDown />
+                </span>
               </button>
-              <div className="absolute left-0 hidden mt-2 w-40 bg-gray-800 text-white rounded shadow-lg group-hover:block">
-                <a href="#" className="block px-4 py-2">
-                  Web Development
-                </a>
-                <a href="#" className="block px-4 py-2">
-                  App Development
-                </a>
-                <a href="#" className="block px-4 py-2">
-                  SEO Services
-                </a>
+              <div className="absolute left-0 hidden mt-0 w-40 bg-gray-800 text-white rounded shadow-lg group-hover:block">
+                <Link to={"#"} className="block px-4 py-2">
+                  Photoes
+                </Link>
+
+                <Link to={"#"} className="block px-4 py-2">
+                  Members
+                </Link>
+                <Link to={"#"} className="block px-4 py-2">
+                  Location
+                </Link>
+                <Link to={"#"} className="block px-4 py-2">
+                  Contact
+                </Link>
+                <Link to={"#"} className="block px-4 py-2">
+                  Fees
+                </Link>
               </div>
             </span>
           </div>
@@ -107,31 +139,66 @@ const Navbar = () => {
             <a
               onClick={() => toggleMenu(false)}
               href="#Header"
-              className="block "
+              className="block hover:bg-gray-700 py-1 px-3 rounded hover:text-white"
             >
               Home
             </a>
             <a
               onClick={() => toggleMenu(false)}
               href="#About"
-              className="block "
+              className="block hover:bg-gray-700 py-1 px-3 rounded hover:text-white"
             >
               About
             </a>
             <a
               onClick={() => toggleMenu(false)}
               href="#Services"
-              className="block "
+              className="block hover:bg-gray-700 py-1 px-3 rounded hover:text-white"
             >
               Services
             </a>
             <a
               onClick={() => toggleMenu(false)}
               href="#Contact"
-              className="block "
+              className="block hover:bg-gray-700 py-1 px-3 rounded hover:text-white"
             >
               Contact
             </a>
+            <Link
+              to={"photo"}
+              onClick={() => toggleMenu(false)}
+              className="block hover:bg-gray-700 py-1 px-3 rounded hover:text-white"
+            >
+              Photo
+            </Link>
+            <Link
+              to={"members"}
+              onClick={() => toggleMenu(false)}
+              className="block hover:bg-gray-700 py-1 px-3 rounded hover:text-white"
+            >
+              Members
+            </Link>
+            <Link
+              to={"location"}
+              onClick={() => toggleMenu(false)}
+              className="block hover:bg-gray-700 py-1 px-3 rounded hover:text-white"
+            >
+              Location
+            </Link>
+            <Link
+              to={"contact"}
+              onClick={() => toggleMenu(false)}
+              className="block hover:bg-gray-700 py-1 px-3 rounded hover:text-white"
+            >
+              Contact
+            </Link>
+            <Link
+              to={"fees"}
+              onClick={() => toggleMenu(false)}
+              className="block hover:bg-gray-700 py-1 px-3 rounded hover:text-white"
+            >
+              Fees
+            </Link>
           </div>
         )}
       </div>
