@@ -42,12 +42,12 @@ const Navbar = () => {
             >
               About
             </a>
-            <a
-              href="#Services"
+            <Link
+              to={"service"}
               className="hover:bg-gray-700 p-2 rounded hover:text-white"
             >
               Services
-            </a>
+            </Link>
             <a
               href="#Contact"
               className="hover:bg-gray-700 p-2 rounded hover:text-white"
@@ -72,11 +72,14 @@ const Navbar = () => {
                 <Link to={"location"} className="block px-4 py-2">
                   Location
                 </Link>
-                <Link to={"location"} className="block px-4 py-2">
+                <Link to={"contact"} className="block px-4 py-2">
                   Contact
                 </Link>
                 <Link to={"#"} className="block px-4 py-2">
                   Fees
+                </Link>
+                <Link to={"signup"} className="block px-4 py-2">
+                  Signup
                 </Link>
               </div>
             </span>
@@ -135,7 +138,7 @@ const Navbar = () => {
         </div>
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden space-y-2">
+          <div className="md:hidden space-y-2 border-b border-b-gray-500 pb-5">
             <a
               onClick={() => toggleMenu(false)}
               href="#Header"
@@ -150,13 +153,13 @@ const Navbar = () => {
             >
               About
             </a>
-            <a
+            <Link
+              to={"service"}
               onClick={() => toggleMenu(false)}
-              href="#Services"
               className="block hover:bg-gray-700 py-1 px-3 rounded hover:text-white"
             >
               Services
-            </a>
+            </Link>
             <a
               onClick={() => toggleMenu(false)}
               href="#Contact"
@@ -198,6 +201,13 @@ const Navbar = () => {
               className="block hover:bg-gray-700 py-1 px-3 rounded hover:text-white"
             >
               Fees
+            </Link>
+            <Link
+              to={"sighup"}
+              onClick={() => toggleMenu(false)}
+              className="block hover:bg-gray-700 py-1 px-3 rounded hover:text-white"
+            >
+              Signup
             </Link>
           </div>
         )}
